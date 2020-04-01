@@ -16,7 +16,7 @@ WLibrarySidebar::WLibrarySidebar(QWidget* parent)
           WBaseWidget(this) {
     //Set some properties
     setHeaderHidden(true);
-    setSelectionMode(QAbstractItemView::SingleSelection);
+    setSelectionMode(QAbstractItemView::ExtendedSelection);
     //Drag and drop setup
     setDragEnabled(false);
     setDragDropMode(QAbstractItemView::DragDrop);
@@ -155,7 +155,7 @@ void WLibrarySidebar::dropEvent(QDropEvent * event) {
 }
 
 
-void WLibrarySidebar::toggleSelectedItem() {
+void WLibrarySidebar::toggleActiveItem() {
     QModelIndexList selectedIndices = this->selectionModel()->selectedRows();
     if (selectedIndices.size() > 0) {
         QModelIndex index = selectedIndices.at(0);
@@ -166,7 +166,7 @@ void WLibrarySidebar::toggleSelectedItem() {
     }
 }
 
-bool WLibrarySidebar::isLeafNodeSelected() {
+bool WLibrarySidebar::isLeafNodeActive() {
     QModelIndexList selectedIndices = this->selectionModel()->selectedRows();
     if (selectedIndices.size() > 0) {
         QModelIndex index = selectedIndices.at(0);
@@ -183,7 +183,7 @@ bool WLibrarySidebar::isLeafNodeSelected() {
 
 void WLibrarySidebar::keyPressEvent(QKeyEvent* event) {
     if (event->key() == Qt::Key_Return) {
-        toggleSelectedItem();
+        toggleActiveItem();
         return;
     } else if (event->key() == Qt::Key_Down || event->key() == Qt::Key_Up) {
         // Let the tree view move up and down for us.

@@ -540,7 +540,7 @@ void LibraryControl::slotSelectPrevSidebarItem(double v) {
 
 void LibraryControl::slotToggleSelectedSidebarItem(double v) {
     if (m_pSidebarWidget && v > 0) {
-        m_pSidebarWidget->toggleSelectedItem();
+        m_pSidebarWidget->toggleActiveItem();
     }
 }
 
@@ -556,7 +556,7 @@ void LibraryControl::slotGoToItem(double v) {
 
     // Focus the library if this is a leaf node in the tree
     if (m_pSidebarWidget && m_pSidebarWidget->hasFocus()) {
-        if (v > 0 && m_pSidebarWidget->isLeafNodeSelected()) {
+        if (v > 0 && m_pSidebarWidget->isLeafNodeActive()) {
             setLibraryFocus();
         } else {
             // Otherwise toggle the sidebar item expanded state
