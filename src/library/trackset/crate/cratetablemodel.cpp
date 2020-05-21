@@ -101,8 +101,7 @@ bool CrateTableModel::addTrack(const QModelIndex& index, QString location) {
 TrackModel::CapabilitiesFlags CrateTableModel::getCapabilities() const {
     CapabilitiesFlags caps =
             TRACKMODELCAPS_RECEIVEDROPS |
-            TRACKMODELCAPS_ADDTOPLAYLIST |
-            TRACKMODELCAPS_ADDTOCRATE |
+            TRACKMODELCAPS_ADDTOTRACKSET |
             TRACKMODELCAPS_ADDTOAUTODJ |
             TRACKMODELCAPS_EDITMETADATA |
             TRACKMODELCAPS_LOADTODECK |
