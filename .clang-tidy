@@ -1,0 +1,3 @@
+ChecksOptions:
+  - key: modernize-use-nodiscard
+    value: false
