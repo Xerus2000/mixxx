@@ -1,9 +1,9 @@
 #pragma once
 
+#include <rigtorp/SPSCQueue.h>
+
 #include <QScopedPointer>
 #include <QSharedPointer>
-
-#include "rigtorp/SPSCQueue.h"
 
 #include "util/class.h"
 #include "util/reference.h"

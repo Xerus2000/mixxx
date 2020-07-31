@@ -1,8 +1,8 @@
 #pragma once
 
-#include <vector>
+#include <rigtorp/SPSCQueue.h>
 
-#include "rigtorp/SPSCQueue.h"
+#include <vector>
 
 #include "analyzer/analyzer.h"
 #include "analyzer/analyzerprogress.h"

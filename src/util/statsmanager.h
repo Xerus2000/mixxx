@@ -1,21 +1,21 @@
 #pragma once
 
+#include <rigtorp/SPSCQueue.h>
+
+#include <QAtomicInt>
+#include <QList>
 #include <QMap>
+#include <QMutex>
 #include <QObject>
 #include <QString>
 #include <QThread>
-#include <QAtomicInt>
-#include <QtDebug>
-#include <QMutex>
-#include <QWaitCondition>
 #include <QThreadStorage>
-#include <QList>
+#include <QWaitCondition>
+#include <QtDebug>
 
-#include "rigtorp/SPSCQueue.h"
-
+#include "util/event.h"
 #include "util/singleton.h"
 #include "util/stat.h"
-#include "util/event.h"
 
 class StatsManager;
 
